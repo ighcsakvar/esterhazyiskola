@@ -1,0 +1,38 @@
+body.home {
+  background: url(../images/suli-25p.jpg) no-repeat center center fixed;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+body.home #footer {
+  display: none;
+}
+
+.center img {
+  display: block;
+  margin: 0 auto;
+}
+
+#footer {
+  background-image: url('../images/footer.png') !important;
+  background-repeat: repeat-x !important;
+  background-position: left !important;
+  width: 100% !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+#footer p {
+  text-align: left;
+  margin: auto;
+  padding: 10px;
+  color: black;
+}
+
+#footer p a {
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
