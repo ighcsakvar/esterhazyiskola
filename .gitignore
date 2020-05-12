@@ -1,5 +1,5 @@
-!user/pages/
-!user/themes/
+!user/pages/*
+!user/themes/*
 .github/*
 .htaccess
 CHANGELOG.md
