@@ -204,6 +204,15 @@ body.home:after {
   animation-fill-mode: forwards;
 }
 
+body.notransition:before,
+body.notransition:after {
+  animation: none !important;
+  transition: none !important;
+  filter: none !important;
+  opacity: 1.0 !important;
+  content: '';
+}
+
 body.home #footer {
   display: none;
 }

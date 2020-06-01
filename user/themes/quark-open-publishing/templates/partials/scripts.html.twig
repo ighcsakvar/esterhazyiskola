@@ -1,1 +1,9 @@
 <!--- Your global JavaScript code can go here -->
+<script>
+  if (getCookie("seen")===null) {
+    setCookie("seen", 1, 1);
+  }
+  else {
+    document.getElementById("top").classList.add("notransition");
+  }
+</script>
