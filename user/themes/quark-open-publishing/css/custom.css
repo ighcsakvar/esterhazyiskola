@@ -146,10 +146,23 @@
   }
 }
 
-@keyframes home_band {
+@keyframes home_band-desktop {
   0% {
     visibility: hidden;
-    left: -3000px;
+    left: -500px;
+  }
+  100% {
+    visibility: visible;
+    top: 60vh;
+    left: 25vw;
+    z-index: 999;
+  }
+}
+
+@keyframes home_band-mobile {
+  0% {
+    visibility: hidden;
+    left: -500px;
   }
   100% {
     visibility: visible;
@@ -234,9 +247,31 @@ body.home #footer:after {
   font-size: large;
 }*/
 
+@media screen and (max-width: 600px) {
 div.home-band-wrapper {
   position: absolute;
-  top: 200px;
+  top: 56vh !important;
+  width: 100vw;
+  left: 0;
+  text-align: center;
+  /*font-family: "Cabin Sketch";*/
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  font-weight: bold;
+  /*border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
+  opacity: 0.7;*/
+
+  animation-name: home_band-mobile;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  animation-timing-function: ease-out;
+}
+}
+
+@media screen and (min-width: 601px) {
+div.home-band-wrapper {
   position: absolute;
   top: 58vh !important;
   width: 100vw;
@@ -244,18 +279,19 @@ div.home-band-wrapper {
   text-align: center;
   /*font-family: "Cabin Sketch";*/
   font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  font-weight: bold;
   /*border-top: 1px solid black;
   border-bottom: 1px solid black;
   background-color: white;
   opacity: 0.7;*/
 
-  animation-name: home_band;
-  animation-duration: 3s;
+  animation-name: home_band-desktop;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   visibility: hidden;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-out;
 }
-
+}
 div.home-band-wrapper a {
   color: black;
   text-decoration: none;
@@ -263,7 +299,7 @@ div.home-band-wrapper a {
 
 div.home-footer {
   width: 100%;
-  top: 90vh !important;
+  top: 80vh !important;
   position: absolute;
 }
 
@@ -281,6 +317,7 @@ div.home-footer ul li {
 div.home-footer ul li a {
   color: black;
   text-decoration: none;
+  font-weight: bold;
 }
 
 ul.home-band li:before,
