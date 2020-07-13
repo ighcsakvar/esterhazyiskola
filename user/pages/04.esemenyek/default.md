@@ -1,6 +1,5 @@
 ---
-title: Események
-date: '2020-06-24 09:39'
+hide_git_sync_repo_link: false
 ---
 
-[fullcalendar icsfile="https://calendar.google.com/calendar/ical/parphis%40gmail.com/public/basic.ics" ][/fullcalendar]
+[fullcalendar icsfile=parphis.ics][/fullcalendar]

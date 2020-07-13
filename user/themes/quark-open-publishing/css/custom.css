@@ -44,46 +44,46 @@
     -ms-filter: brightness(60%);
   }
   20% {
-    -webkit-filter: brightness(10%);
-    -moz-filter: brightness(10%);
-    -o-filter: brightness(10%);
-    -ms-filter: brightness(10%);
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
   }
   30% {
-    -webkit-filter: brightness(5%);
-    -moz-filter: brightness(5%);
-    -o-filter: brightness(5%);
-    -ms-filter: brightness(5%);
+    -webkit-filter: brightness(45%);
+    -moz-filter: brightness(45%);
+    -o-filter: brightness(45%);
+    -ms-filter: brightness(45%);
   }
   40% {
-    -webkit-filter: brightness(5%);
-    -moz-filter: brightness(5%);
-    -o-filter: brightness(5%);
-    -ms-filter: brightness(5%);
+    -webkit-filter: brightness(45%);
+    -moz-filter: brightness(45%);
+    -o-filter: brightness(45%);
+    -ms-filter: brightness(45%);
   }
   50% {
-    -webkit-filter: brightness(5%);
-    -moz-filter: brightness(5%);
-    -o-filter: brightness(5%);
-    -ms-filter: brightness(5%);
+    -webkit-filter: brightness(45%);
+    -moz-filter: brightness(45%);
+    -o-filter: brightness(45%);
+    -ms-filter: brightness(45%);
   }
   60% {
-    -webkit-filter: brightness(5%);
-    -moz-filter: brightness(5%);
-    -o-filter: brightness(5%);
-    -ms-filter: brightness(5%);
+    -webkit-filter: brightness(45%);
+    -moz-filter: brightness(45%);
+    -o-filter: brightness(45%);
+    -ms-filter: brightness(45%);
   }
   70% {
-    -webkit-filter: brightness(5%);
-    -moz-filter: brightness(5%);
-    -o-filter: brightness(5%);
+    -webkit-filter: brightness(45%);
+    -moz-filter: brightness(45%);
+    -o-filter: brightness(45%);
     -ms-filter: brightness(5%);
   }
   80% {
-    -webkit-filter: brightness(10%);
-    -moz-filter: brightness(10%);
-    -o-filter: brightness(10%);
-    -ms-filter: brightness(10%);
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
   }
   90% {
     -webkit-filter: brightness(60%);
@@ -190,7 +190,7 @@ body.home:before {
   left: 0;
 
   animation-name: greeting;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-timing-function: ease-in;
   /*animation-fill-mode: forwards;*/
 }
@@ -212,7 +212,7 @@ body.home:after {
   padding: 10px 10px 10px 10px;
 
   animation-name: greeting_text;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }

@@ -1,3 +1,4 @@
+*.sw*
 !user/pages/*
 !user/themes/*
 .github/*
