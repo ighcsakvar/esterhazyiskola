@@ -1,0 +1,37 @@
+{% extends 'partials/base.html.twig' %}
+{# Based on https://www.w3schools.com/howto/howto_js_accordion.asp #}
+{% block content %}
+  {% set list=filecontent(page.header.class_list) %}
+  {% set records=list|split('\n') %}
+  {% for rec in records %}
+    {% set fields=rec|split(',') %}
+    {% if fields[0] != '' %}
+      {# 0: osztaly, 1: oszt.vezeto, 2: letszam  #}
+      <button class="class-head">{{ fields[0] }}, osztályfőnök: {{ fields[1] }}, létszám: {{ fields[2] }} fő</button>
+      {# 3..n: tanulok #}
+      <div class="students-panel">
+      {% for i in 3..fields|length %}
+        {% if fields[i] != '' %}
+          {{ fields[i] }},&nbsp;
+        {% endif %}
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+<script>
+var acc = document.getElementsByClassName("class-head");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("class-active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+{% endblock %}

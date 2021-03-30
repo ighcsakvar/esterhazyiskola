@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<style type="text/css">
+.outer-wrapper{
+    /*display: inline-block;*/
+    margin: 5px 15px;
+    padding: 25px 15px;
+    background: #eee;
+    min-height: 100px;
+}
+
+.column-wrapper{
+    height: 20px;
+    /*width: 100vw;*/
+    background: #CFD8DC;
+    transform: rotate(0deg);
+    margin: 0 auto;
+}
+
+.column{
+    height: 20px;
+    background: #90A4AE;
+    float:left;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+#h1 { width:14%; background-color:red; }
+#h2 { width:4%; background-color:green;}
+#h3 { width:14%; background-color:red;}
+#h4 { width:3%; background-color:green;}
+#h5 { width:14%; background-color:red; }
+#h6 { width:4%; background-color:green;}
+#h7 { width:14%; background-color:red;}
+#h8 { width:3%; background-color:green;}
+#h9 { width:14%; background-color:red;}
+#h10 { width:2%; background-color:green;}
+#h11 { width:14%; background-color:red;}
+
+.percentage, .value{
+    display:none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #263238;
+    position: relative;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.value{
+    background: #7986CB;
+}
+#marker {
+    border: 1px solid black;
+    width: 3px;
+    height: 20px;
+
+}
+</style>
+ <script>
+function start_p(arr, current) {
+    var res = 0;
+    for (const [key, value] of Object.entries(arr)) {
+        if (current!=key) {
+            res += arr[key];
+        }
+        else {
+            console.log(current, res);
+            return res;
+        }
+    }
+    return res;
+}
+function draw() {
+    var canvas = document.getElementById('canvas');
+    var bar_height= 600;
+    var hours = {
+        "p1": (45/325)*bar_height,
+        "p2": (15/325)*bar_height,
+        "p3": (45/325)*bar_height,
+        "p4": (10/325)*bar_height,
+        "p5": (45/325)*bar_height,
+        "p6": (15/325)*bar_height,
+        "p7": (45/325)*bar_height,
+        "p8": (10/325)*bar_height,
+        "p9": (45/325)*bar_height,
+        "p10": (5/325)*bar_height,
+        "p11": (45/325)*bar_height
+    }
+    if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        ctx.font = "15px Arial";
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, start_p(hours,'p1'), 100, hours['p1']);
+        ctx.fillStyle = 'black';
+        ctx.fillText('8:00 - 8:45', 20,30);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, start_p(hours,'p2'), 100, hours['p2']);
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, start_p(hours,'p3'), 100, hours['p3']);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, start_p(hours,'p4'), 100, hours['p4']);
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, start_p(hours,'p5'), 100, hours['p5']);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, start_p(hours,'p6'), 100, hours['p6']);
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, start_p(hours,'p7'), 100, hours['p7']);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, start_p(hours,'p8'), 100, hours['p8']);
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, start_p(hours,'p9'), 100, hours['p9']);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, start_p(hours,'p10'), 100, hours['p10']);
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, start_p(hours,'p11'), 100, hours['p11']);
+    }
+}
+ </script>
+ <script src="./gauge.min.js"></script>
+<title>hello</title>
+</head>
+<body>
+    <div>
+                <canvas id="foo">
+
+                            </canvas>
+                                    <p>url: <a href="http://bernii.github.io/gauge.js/">gauge.js</a></p> 
+                                        </div>
+        <div id="hour">--</div>
+
+                                            <script src="gauge.js"></script>
+    <canvas id="canvas" width="100" height="600" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+    <button onclick="draw()">draw</button>
+    <div class="outer-wrapper">
+        <div id="marker"></div>
+        <div class="column-wrapper">
+            <div id="h1" class="column">8:00 - 8:45</div>
+            <div id="h2" class="column">15</div>
+            <div id="h3" class="column">9:00 - 9:45</div>
+            <div id="h4" class="column">10</div>
+            <div id="h5" class="column">9:55 - 10:40</div>
+            <div id="h6" class="column">15</div>
+            <div id="h7" class="column">10:55 - 11:40</div>
+            <div id="h8" class="column">10</div>
+            <div id="h9" class="column">11:50 - 12:35</div>
+            <div id="h10" class="column">5</div>
+            <div id="h11" class="column">12:40 - 13:25</div>
+        </div>
+        <div class="percentage">--</div>
+        <div class="value">XX / YY</div>
+    </div>
+</body>
+</html>

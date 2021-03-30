@@ -1,5 +1,143 @@
+.navbar {
+    width: 82vw;
+}
+
+div.icons-bar {
+    position: absolute;
+    top:84vh;
+    left: 1vw;
+}
+
+div.icons-bar img {
+    width: 64px;
+}
+
+div.icons-bar ul {
+    list-style-type: none;
+}
+
+div.icons-bar ul li {
+    float: left;
+    padding: 3px;
+}:
+
+img.left, img.right {
+    margin: 0.5rem 15px 0px 15px;
+}
+.padding-top-trick-5 {
+    padding-top: 7px;
+}
+
+.padding-top-trick-10 {
+    padding-top: 40px;
+}
+
+@media screen and (min-width: 1000px) {
+    div.centered-text {
+    margin: 0 auto;
+    width: 80vw;
+    text-align: justify;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    div.centered-text {
+    text-align: justify;
+    }
+}
+
+div.centered-text h3, div.centered-text h4 {
+    color: darkred !important;
+    text-align: center;
+}
+
+blockquote {
+    display: block;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #eee;
+    padding: 1.5em 0 0.5em;
+    margin: 1.5em 0;
+    position: relative;
+}
+
+blockquote:after {
+    content: "\2013 \2003" attr(cite);
+    display: block;
+    text-align: right;
+    font-size: 0.875em;
+    color: #e74c3c;
+}
+
+div#legend {
+  padding-bottom: 10px;
+}
+
+.calnames {
+  display: flex;
+  text-align: center;
+}
+
+.calname-tag {
+  padding: 1px;
+  font-size: .7rem;
+  width: 100vw;
+  font-weight: bold;
+}
+
+#actMonthImg {
+  width: 150px;
+}
+
+.month-img {
+  width: 200px;
+}
+
+div.year {
+  padding: 0px 0px 0px 35px;
+}
+
+div.year img {
+  width: 20px;
+}
+
+div.fc-center h2 {
+  display: none;
+}
+
+.fc-list-item {
+  background-color: beige;
+}
+
+.fc-title, .fc-time {
+  color: black;
+}
+
+#page-wrapper {
+  background-color: #ffffef;
+}
+
+.mobile-container a {
+  color: white;
+}
+
+#header a { 
+    color: black; 
+    font-size: 1.2em !important;
+}
+
+.mobile-menu .button_container span {
+  background: black;
+}
+
+.treemenu .toggler {
+  font-size: 1.7rem;
+  padding-right: 15px;
+  color: white;
+}
+
 .bg-gray {
-  background-color: #F9F3E0 !important;
+  background: none !important;
 }
 /* cabin-sketch-regular - latin */
 @font-face {
@@ -103,13 +241,15 @@
 
 @keyframes greeting_text {
   0% {
+    visibility: visible;
     opacity: 0;
+    z-index: 9999;
   }
   10% {
-    opacity: 0.6;
+    opacity: 1.0;
   }
   20% {
-    opacity: 0.8;
+    opacity: 1.0;
   }
   30% {
     opacity: 1.0;
@@ -127,22 +267,24 @@
     opacity: 1.0;
   }
   80% {
-    opacity: 0.8;
+    opacity: 1.0;
   }
   90% {
-    opacity: 0.6;
+    opacity: 1.0;
   }
   95% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
   98% {
-    opacity: 0.2;
+    opacity: 0.3;
   }
   99% {
     opacity: 0.1;
   }
   100% {
     opacity: 0.0;
+    z-index: -1;
+    display: hidden;
   }
 }
 
@@ -172,6 +314,10 @@
   }
 }
 
+body {
+    background-color: #ffffef !important;
+}
+
 body.home {
   overflow: hidden;
 }
@@ -189,15 +335,27 @@ body.home:before {
   top: 0;
   left: 0;
 
-  animation-name: greeting;
+  /*animation-name: greeting;
   animation-duration: 10s;
   animation-timing-function: ease-in;
-  /*animation-fill-mode: forwards;*/
+  animation-fill-mode: forwards;*/
 }
 
 body.home:after {
-  content: 'Üdvözöljük az Esterházy Iskola \A honlapján!';
-  white-space: pre-wrap;
+  visibility: hidden;
+  content: ''; /*'Üdvözöljük az Esterházy Iskola \A honlapján!';*/
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/welcome-2-25p.jpg) no-repeat center center fixed;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  top: 0;
+  left: 0;
+  /*z-index: 9999;*/
+  /*white-space: pre-wrap;
   margin: 0 auto;
   position: absolute;
   top: 50%;
@@ -209,10 +367,10 @@ body.home:after {
   font-weight: 700;
   color: Khaki;
   background-color: none;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;*/
 
   animation-name: greeting_text;
-  animation-duration: 10s;
+  animation-duration: 3s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
@@ -227,6 +385,10 @@ body.notransition:after {
 }
 
 body.home #footer {
+  display: none;
+}
+
+body.hide-footers #footer {
   display: none;
 }
 
@@ -247,51 +409,88 @@ body.home #footer:after {
   font-size: large;
 }*/
 
-@media screen and (max-width: 600px) {
-div.home-band-wrapper {
-  position: absolute;
-  top: 56vh !important;
-  width: 100vw;
+#footer {
+  background-image: url('../images/footer.png') !important;
+  background-repeat: repeat-x !important;
+  background-position: left bottom !important;
+  width: 100% !important;
+  height: 150px;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: fixed;
   left: 0;
-  text-align: center;
-  /*font-family: "Cabin Sketch";*/
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-  font-weight: bold;
-  /*border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  background-color: white;
-  opacity: 0.7;*/
-
-  animation-name: home_band-mobile;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  animation-timing-function: ease-out;
-}
+  bottom: 45px;
 }
 
-@media screen and (min-width: 601px) {
-div.home-band-wrapper {
-  position: absolute;
-  top: 58vh !important;
-  width: 100vw;
-  left: 0;
-  text-align: center;
-  /*font-family: "Cabin Sketch";*/
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-  font-weight: bold;
-  /*border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  background-color: white;
-  opacity: 0.7;*/
+@media screen and (max-width: 800px) {
+  div.home-footer ul li a {
+    font-size: initial;
+  }
 
-  animation-name: home_band-desktop;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  animation-timing-function: ease-out;
+  div.home-band-wrapper {
+    position: absolute;
+    top: 56vh !important;
+    width: 100vw;
+    left: 0;
+    text-align: center;
+    /*font-family: "Cabin Sketch";*/
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+    font-weight: bold;
+    /*border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    opacity: 0.7;*/
+
+    animation-name: home_band-mobile;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    animation-timing-function: ease-out;
+  }
 }
+
+@media screen and (min-width: 801px) {
+  body {
+    padding-bottom: 300px;
+  }
+
+  body.sticky-footer {
+    height: unset;
+  }
+  div.home-band-wrapper {
+    position: absolute;
+    top: 58vh !important;
+    width: 100vw;
+    left: 0;
+    text-align: center;
+    /*font-family: "Cabin Sketch";*/
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+    font-weight: bold;
+    /*border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    opacity: 0.7;*/
+
+    animation-name: home_band-desktop;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    animation-timing-function: ease-out;
+  }
+  #footer {
+    background-image: url('../images/footer.png') !important;
+    background-repeat: repeat-x !important;
+    background-position: left bottom !important;
+  }
 }
+
+@media screen and (max-width: 800px), screen and (max-height: 768px) {
+  #footer {
+    background:none !important;
+    height: 0 !important;
+  }
+}
+
 div.home-band-wrapper a {
   color: black;
   text-decoration: none;
@@ -299,7 +498,7 @@ div.home-band-wrapper a {
 
 div.home-footer {
   width: 100%;
-  top: 80vh !important;
+  top: 73vh !important;
   position: absolute;
 }
 
@@ -314,19 +513,33 @@ div.home-footer ul li {
   color: black;
 }
 
-div.home-footer ul li a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
+ul.home-band li a {
+    font-size: 1.2em;
 }
 
-ul.home-band li:before,
-div.home-footer ul li:before {
+div.home-footer ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+
+
+ul.home-band li:before {
   content: ' | ';
 }
 
+div.home-footer ul li:before {
+  content: '   ';
+}
+
+.footer-link {
+  background: none !important;
+}
+
 .header-transparent #header:not(.scrolled) {
-  background: rgba(255,255,255,0.4);
+  /*background: rgba(255,255,255,0.4);*/
 }
 
 .center img {
@@ -334,24 +547,255 @@ div.home-footer ul li:before {
   margin: 0 auto;
 }
 
-#footer {
-  background-image: url('../images/footer.png') !important;
-  background-repeat: repeat-x !important;
-  background-position: left !important;
-  width: 100% !important;
-  margin: 0px !important;
-  padding: 0px !important;
+.footer-text {
+  position: absolute;
+  left: 0;
+  background-color: #ffffef;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-family: Arial;
+  font-size: small;
+  padding: 12px 0px 12px 0px;
+  bottom: -45px;
 }
 
-#footer p {
+.footer-text a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* EMU gallery */
+.emu-gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.emu-gallery-col {
+  /*flex: 25%;*/
+  padding: 3px;
+}
+
+@media screen and (min-width: 1367px) {
+  .emu-gallery-col {
+    /*flex: 75%;*/
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .emu-gallery-col {
+    /*flex: 30%;*/
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .emu-gallery-col {
+    /*flex: 100%;*/
+    padding: 3px;
+  }
+}
+
+.emu-gallery-col img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.emu-gallery-caption {
+  width: 100%;
+  text-align: center;
+  font-size: xx-large;
+  border: 1px solid black;
+  margin-bottom: 4vh;
+}
+
+/**
+ * lapok stílusaihoz kötődő beállítások
+ */
+
+/* közzétételi lista */
+table#kozlista-3-ab,
+table#kozlista-3-c,
+table#kozlista-3-d,
+table#kozlista-3-i,
+table#kozlista-osztalyok,
+table#kozlista-3-e {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table#kozlista-3-ab tr,
+table#kozlista-3-c tr,
+table#kozlista-3-d tr,
+table#kozlista-3-i tr,
+table#kozlista-osztalyok tr,
+table#kozlista-3-e tr {
+  border: 1px solid black;
+}
+
+table#kozlista-3-ab tr td,
+table#kozlista-3-c tr td,
+table#kozlista-3-d tr td,
+table#kozlista-3-i tr td,
+table#kozlista-osztalyok tr td,
+table#kozlista-3-e tr td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table#kozlista-3-ab thead tr td,
+table#kozlista-3-c thead tr td,
+table#kozlista-3-d thead tr td,
+table#kozlista-osztalyok thead tr td,
+table#kozlista-3-e thead tr td {
+  text-align: center;
+  background-color: lightgray;
+}
+
+/* pedagógus kártyák */
+.employees {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .employees {
+    display: block;
+  }
+}
+
+.employee-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.employee-card h1 {
+  font-size: 1em;
+}
+
+.employee-title {
+  color: grey;
+  font-size: 18px;
+}
+
+.employee-card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+/* osztályok */
+.class-head {
+  background-color: #ffffcf;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
   text-align: left;
-  margin: auto;
-  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.class-active, .class-head:hover {
+  background-color: #ffff9f;
+}
+
+.class-head:before {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.class-active:before {
+  content: "\2212";
+}
+
+.students-panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.classes {
+  list-style-type: none;
+}
+
+.students {
+  list-style-type: none;
+}
+
+/* zeneiskola  */
+.dallam-ami-logo {
+  float: left;
+}
+
+/* kapcsolatok */
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contacts {
+    display: block;
+  }
+  .leaflet-container {
+    max-width: 400px !important;
+    width: none !important;
+  }
+}
+
+.contact-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.contact-title {
+  color: grey;
+  font-size: 1.3em;
+}
+
+.contact-card a {
+  text-decoration: none;
   color: black;
 }
 
-#footer p a {
-  color: black;
-  text-decoration: underline;
-  font-weight: bold;
+.contact-address {
+}
+
+.contact-phone {
+  font-size: 1.3em;
+}
+
+.contact-phone p {
+  line-height: 0.8em;
+}
+
+.contact-phone p span {
+  font-size: 0.7em;
+}
+
+.leaflet-container {
+  max-width: 400px !important;
+  z-index: 0;
 }

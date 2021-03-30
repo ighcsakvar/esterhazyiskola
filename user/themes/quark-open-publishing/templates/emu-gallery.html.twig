@@ -1,0 +1,32 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+{% if page.header.show_month_image %}
+<img class="month-img" src="{{ base_url_absolute }}/esemenyek/naptar/{{ page.title|lower }}.png"></img>
+{% endif %}
+
+{% for p in page.children %}
+  {% if page.header.show_collection_name %}
+    <div class="emu-gallery-caption">{{ p.title }}</div>
+  {% endif %}
+
+<div class="emu-gallery-row">
+    {% for image in p.media.images|sort|reverse %}
+      {# cycle(['<div class="emu-gallery-col">','','',''], loop.index0) #}
+      <div class="emu-gallery-col">
+
+      <a href="{{ image.resize(1920,1280).url }}" rel="lightbox">
+          {{ image.lightbox(1024,768).cropResize(400,400).html(alt) }}
+      </a>
+
+      {% if page.header.show_captions %}
+        {% set imgtitle = image.filename|replace({'.JPG':'','.jpg':'','_':' ','-':' '}) %}
+        <p><small>{{ imgtitle }}</small></p>
+      {% endif %}
+
+      {# cycle(['','','','</div>'], loop.index0) #}
+      </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endblock %}

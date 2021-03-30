@@ -1,5 +1,6 @@
 enabled: true
-colors: red,yellow # see additional Note on custom colors
+colors: gold,dodgerblue,tan # see additional Note on custom colors
+calendars: Egész iskola,Alsósok,Felsősök
 showlegend: true   # set to true to show calendar File Name(s) as Legend below grid
 locale: 'hu'  # use your own locale here, e.g. de
 weekNumbers: false  # set to true to show Week Numbers

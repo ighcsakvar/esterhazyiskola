@@ -1,0 +1,26 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  {% set list=filecontent(page.header.employee_list) %}
+  {% set records=list|split('\n') %}
+  <div class="employees">
+  {% for rec in records %}
+    {# fields: #}
+    {# 0: nev, 1: pedagogus fokozat, 2: munkakor, 3: szak, muveltsegi terulet #}
+    {% set fields=rec|split(';') %}
+    {% if fields[0] != '' %}
+    <div class="employee-card">
+      <img src="{{ page.url ~ '/' ~ fields[0] ~ '.jpg'}}" alt="{{ fields[0] }}" style="width:100%">
+      <h1>{{ fields[0] }}</h1>
+      <p class="employee-title">{{ fields[2] }}</p>
+      <p>{{ fields[3] }}</p>
+      <p>{{ fields[4] }}</p>
+      {# <p>{{ fields[1] }}</p>
+      <a href="#"><i class="fa fa-at"></i></a>
+      <a href="#"><i class="fa fa-phone"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a> #}
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+{% endblock %}

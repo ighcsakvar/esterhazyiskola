@@ -16,7 +16,11 @@
             </li>
         {% else %}
             <li>
+                {% if p.redirect %}
+                <a href="{{ p.redirect }}" target="_blank" class="{{ active_page }}">
+                {% else %}
                 <a href="{{ p.url }}" class="{{ active_page }}">
+                {% endif %}
                     {% if p.header.icon %}
                         <i class="fa fa-{{ p.header.icon }}"></i>
                     {% endif %}

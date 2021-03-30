@@ -1,5 +1,5 @@
+<div id='uactMonth'></div>
 <div id='legend'></div>
-<div id='actMonth'></div>
 <div id='calendar'></div>
 
 <script>
@@ -19,6 +19,9 @@
 		if (verbose) console.log('BgColstring:', BgColstring);
 		var colors = BgColstring.split(',');
 		var ncolors = colors.length;
+    var calendars = '{{ config.plugins.fullcalendar.calendars }}';
+    var calnames = calendars.split(',');
+
 		if (ncolors < len)	{	// populate colors with default color from fullcalendar.css
 			colors = ['#3a87ad'];
 			for (i=0; i<(len);i++)
@@ -30,21 +33,26 @@
 		// page is now ready, initialize the calendar...
 		var calendarEl = document.getElementById('calendar');
 		var calendar = new FullCalendar.Calendar(calendarEl, {
-			plugins: [ 'dayGrid', 'timeGrid', 'list' ],
+			plugins: [ 'dayGrid', 'timeGrid', 'month', 'list' ],
       views: {
         dayGridWeek: {
           hiddenDays: [0,6],
           columnHeaderFormat: { weekday: 'short' },
           titleFormat: {month: 'short', day: '2-digit'}
-        }
+        },
+        dayGridMonth: {
+      contentHeight: '55px'
+          }
       },
       defaultView: $(window).width() < 765 ? 'listMonth':'listMonth',
 			locale: LocaleCode,
       firstDay: 1,
 			weekNumbers: weekNums,
+      listDayFormat: {'weekday':'long', 'day':'numeric'},
+      listDayAltFormat: false,
       contentHeight: 'auto',
 			header: {
-        left: 'prev,next',
+        left: 'prev,next,listMonth,dayGridMonth',
         center: $(window).width() < 756 ? 'title' : 'title',
         right: $(window).width() < 756 ? 'today' : 'today'
       },
@@ -87,7 +95,7 @@
 					cfgFile = value;
 					if (verbose) console.log('yaml CFG File:' + cfgFile);
 					// allow remote ics files, full URL required
-					if (cfgFile.startsWith("https://") || cfgFile.startsWith("http://")) {	// calendar URL is remote
+					/*if (cfgFile.startsWith("https://") || cfgFile.startsWith("http://")) {	// calendar URL is remote
 						// automatically add CORS proxy URL for remote calendars, if not yet done 06.04.20
 						var cors_api_url = 'https://cors-anywhere.herokuapp.com/';	// replace this if you prefer another CORS proxy !
 						var origin = window.location.protocol + '//' + window.location.host;
@@ -106,7 +114,8 @@
 						}
 					}   else    {
 						calendarUrl = getAbsolutePath() + 'user/data/calendars/' + cfgFile;
-					}
+					}*/
+					calendarUrl = getAbsolutePath() + '../user/data/calendars/' + cfgFile;
 					if (verbose) console.log('Calendar URL:' + calendarUrl);
 					var events = [];
 					var do_callback = false; // muss zwingend hier hin, nicht ausserhalb der forEach schleife !!
@@ -121,19 +130,34 @@
 						//	map them to FullCalendar events Objects
 						events = jQuery.map(eventComps, function(item) {
 							var fcevents = {};
+
+              var calname = item['parent']['jCal'][1][4][3];
+              var caldesc = item['parent']['jCal'][1][6][3];
+              if (calname !== null) fcevents["calname"] = calname;
+              if (caldesc !== null) fcevents["caldesc"] = caldesc;
+              if (verbose)  console.log(calname, caldesc);
+
 							var entry = item.getFirstPropertyValue("summary");
 							if (entry !== null)	fcevents["title"] = entry;
+
 							var entry = item.getFirstPropertyValue("location");
 							if (entry !== null)	fcevents["location"] = entry;
+
 							var entry = item.getFirstPropertyValue("url");
 							if (entry !== null)	fcevents["url"] = entry;
-							var entry = item.getFirstPropertyValue("dtstart");
-							if (entry !== null)	fcevents["start"] = entry.toJSDate();
-							var entry = item.getFirstPropertyValue("dtend");
-							if (entry !== null)	fcevents["end"] = entry.toJSDate();
+
+							var dtstart = item.getFirstPropertyValue("dtstart");
+							var dtend = item.getFirstPropertyValue("dtend");
+              // all day event
+              if (dtend.toJSDate() - dtstart.toJSDate()==1000*60*60*24) {
+                fcevents["allDay"] = true;
+              }
+  						if (dtstart !== null)	fcevents["start"] = dtstart.toJSDate();
+  						if (dtend !== null)	fcevents["end"] = dtend.toJSDate();
+
 							var entry = item.getFirstPropertyValue("description");	// add description 22.06.20
 							if (entry !== null)	fcevents["description"] = entry;
-							
+						  	
 							// not used options go here
 							
 							var rrules = item.getFirstPropertyValue("rrule");
@@ -212,9 +236,23 @@
 		// show legend, if enabled
 		if (showlegend) {
 			// Add the contents of cfgfiles to #legend:
-			document.getElementById('legend').appendChild(makeUL(cfgfiles, colors));
+			//document.getElementById('legend').appendChild(makeUL(cfgfiles, colors));
+			document.getElementById('legend').appendChild(makeLegend(calnames, colors));
 		}
 	})
+
+  function makeLegend(calnames, colors) {
+    var div = document.createElement('div');
+    div.className = 'calnames';
+    for (var i=0; i<calnames.length; i++) {
+      var tag = document.createElement('div');
+      tag.className = 'calname-tag';
+      tag.innerText = calnames[i];
+      tag.style.backgroundColor = colors[i];
+      div.appendChild(tag);
+    }
+    return div;
+  }
 	
 	function makeUL(array, colors) {
 		// Create the list element:
