@@ -458,8 +458,8 @@ body.home #footer:after {
     height: unset;
   }
   div.home-band-wrapper {
-    position: absolute;
-    top: 58vh !important;
+    position: relative;
+    top: 47vh !important;
     width: 100vw;
     left: 0;
     text-align: center;
