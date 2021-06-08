@@ -3,6 +3,7 @@ title: '2. lapszám'
 media_order: emu_2_vegso_vegso.pdf
 date: '2021-03-10 00:28'
 hide_git_sync_repo_link: false
+redirect: /iskolai-elet/emu/2-lapszam/emu_2_vegso_vegso.pdf
 pdf_title: ''
 display_pdf_title: '0'
 pdf_url: /emu_1_vegso.pdf

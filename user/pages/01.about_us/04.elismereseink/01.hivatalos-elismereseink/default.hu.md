@@ -8,12 +8,14 @@ menu: Hivatalos
 
 <div class="centered-text" markdown="1">
 #### Hivatalos elsimeréseink
-![](elismeres05.jpg?cropResize=800,600&classes=center)
-![](elismeres06.jpg?cropResize=800,600&classes=center)
-![](elismeres07.jpg?cropResize=800,600&classes=center)
-![](elismeres01.jpg?cropResize=800,600&classes=center)
+![](elismeres10.jpg?cropResize=800,600&rotate=+90&classes=center)
 ![](elismeres02.jpg?cropResize=800,600&classes=center)
 ![](elismeres03.jpg?cropResize=800,600&classes=center)
 ![](elismeres04.jpg?cropResize=800,600&classes=center)
-![](elismeres2.jpg?cropResize=800,600&rotate=+90&classes=center)
+![](elismeres01.jpg?cropResize=800,600&classes=center)
+![](elismeres07.jpg?cropResize=800,600&classes=center)
+![](elismeres06.jpg?cropResize=800,600&classes=center)
+![](elismeres05.JPG?cropResize=800,600&classes=center)
+![](elismeres08.JPG?cropResize=800,600&classes=center)
+![](elismeres09.JPG?cropResize=800,600&classes=center)
     </div>

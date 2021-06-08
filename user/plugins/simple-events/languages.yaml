@@ -1,0 +1,55 @@
+en:
+  PLUGIN_SIMPLE_EVENTS:
+    EVENTS: Events
+    ROUTES: Routes to events page(s)
+    LABEL_ORDERBY: Order by
+    OPTION_START: Start day
+    OPTION_END: End day
+    LABEL_ORDERDIR: Direction
+    OPTION_ASC: Asc
+    OPTION_DESC: Desc
+    DELETE_OLD: Delete past events automatically
+    UNPUBLISH_DAY: On which day to unpublish an event
+    LABEL_START: Start day
+    LABEL_END: End day (if given)
+    UNPUBLISH_TIME: At what time to unpublish an event
+    USE_LOCATION: Show location field
+    LABEL_LOCATION: Location
+    USE_LINKS: Use links
+    LINK_OPTIONS: Linkable pages
+    NONE: none
+    LABEL_LINKTOPAGE: Link text in [brackets] to
+    LABEL_ENDDATE: End date (optional)
+    BUTTON_ADDEVENT: Add Event
+    LABEL_TEXT: Text
+    LABEL_REGION: Region
+    LABEL_REGIONS: Regions
+    USE_REGIONS: Use regions (add some below first)
+
+de:
+  PLUGIN_SIMPLE_EVENTS:
+    EVENTS: Termine
+    ROUTES: Seite(n) mit den Terminlisten
+    LABEL_ORDERBY: Sortieren nach
+    OPTION_START: Starttag
+    OPTION_END: Endtag
+    LABEL_ORDERDIR: Sortierrichtung
+    OPTION_ASC: Aufsteigend
+    OPTION_DESC: Absteigend
+    DELETE_OLD: Vergangene Termine automatisch löschen
+    UNPUBLISH_DAY: An welchem Tag werden Termine aus der Liste genommen
+    LABEL_START: Starttag
+    LABEL_END: Endtag (sofern angegeben)
+    UNPUBLISH_TIME: Zu welcher Zeit werden Termine aus der Liste genommen
+    USE_LOCATION: Feld für Veranstaltungsort zeigen
+    LABEL_LOCATION: Veranstaltungsort
+    USE_LINKS: Links verwenden
+    LINK_OPTIONS: Verlinkbare Seiten
+    NONE: nichts
+    LABEL_LINKTOPAGE: Text in [Klammern] verlinken mit
+    LABEL_ENDDATE: Datum Ende (optional)
+    BUTTON_ADDEVENT: Termin hinzufügen
+    LABEL_TEXT: Text
+    LABEL_REGION: Region
+    LABEL_REGIONS: Regionen
+    USE_REGIONS: Regionen verwenden (zuerst welche eintragen)

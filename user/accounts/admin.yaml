@@ -1,0 +1,19 @@
+state: enabled
+_json:
+  avatar: '[]'
+  state: '"enabled"'
+  hashed_password: '"$2y$10$LIzJM.qdQc8UTZcqUNEqYOQ2bzpfyd46WNbW6FHPza9RYHBJaQRn2"'
+email: admin@esterhazyiskola.hu
+fullname: 'Pálinkás Zsolt'
+title: null
+language: hu
+twofa_enabled: false
+twofa_secret: ABIWXXJY67LGCY3QPEYDH27FR6MB473W
+access:
+  site: {  }
+  admin:
+    super: 'true'
+    login: 'true'
+  admin-addon-user-manager: {  }
+hashed_password: $2y$10$LIzJM.qdQc8UTZcqUNEqYOQ2bzpfyd46WNbW6FHPza9RYHBJaQRn2
+password: null

@@ -26,9 +26,9 @@ external_links:
         <span>Iskolatitkár és faxküldés: 23-as mellék</span>
         </p>
     </div>
-    <a href="mailto:igazgato@esterhazyiskola.hu"><i class="fa fa-at"></i>Igazgató</a><br/>
-    <a href="mailto:ighcsakvar@gmail.com"><i class="fa fa-at"></i>Igazgató helyettesek</a><br/>
-    <a href="mailto:titkárság@esterhazyiskola.hu"><i class="fa fa-at"></i>Titkárság</a><br/>
+    <a href="mailto:igazgato@esterhazyiskola.hu"><i class="fa fa-at"></i>Igazgató: <font color="blue">igazgato@esterhazyiskola.hu</font></a><br/>
+    <a href="mailto:ighcsakvar@gmail.com"><i class="fa fa-at"></i>Igazgató helyettesek: <font color="blue">igh@esterhazyiskola.hu</font></a><br/>
+    <a href="mailto:titkárság@esterhazyiskola.hu"><i class="fa fa-at"></i>Titkárság: <font color="blue">titkarsag@esterhazyiskola.hu</font></a><br/>
     <a href="https://www.facebook.com/Esterh%C3%A1zy-M%C3%B3ric-%C3%81ltal%C3%A1nos-Iskola-Cs%C3%A1kv%C3%A1r-146915029013117"><i class="fa fa-facebook"></i></a>
     <div class="contact-opening-hours"><i class="fa fa-clock-o"></i>
         <p>
@@ -52,19 +52,24 @@ external_links:
 [{ "lat": 47.18976, "lng": 18.41188, "icon": "", "title": "Székesfehérvári&nbsp;TK" } ]
 [/a-markers]
 [/map-leaflet]
-    <h1 class="contact-title">Székesfehérvári Tankerületi Központ</h1>
-    <p class="contact-address">8000 Székesfehérvár, Petőfi utca 5.</p>
+    <h1 class="contact-title"><a href="https://kk.gov.hu/szekesfehervar" target="_blank" style="color:gray;">Székesfehérvári Tankerületi Központ</a></h1>
+    <p class="contact-address">8000 Székesfehérvár, Petőfi Sándor utca 5.</p>
+        <p><a href="https://kk.gov.hu/szekesfehervar" target="_blank">web</a></p>
     <div class="contact-phone"><a href="tel:+3622795240"><i class="fa fa-phone"></i>06-22/795-240</a>
         
     </div>
-    
+    <p class="contact-address">A tankerület adatvédelmi tisztviselője<br/>Dr.Várnagy Lilla<br/>
+            <a href="mailto:lilla.varnagy@kk.gov.hu"><i class="fa fa-at"></i><font color="blue">lilla.varnagy@kk.gov.hu</font></a>
+        </p>
     <div class="contact-opening-hours"><i class="fa fa-clock-o"></i>
         <p>
             <span></span>
             <span>Ügyintézés: 8:00 - 16:00</span>
         </p>
     </div>
-        <div class="contact-opening-hours">
-            <img src="tankerulet.jpg"/>
+    <div class="contact-opening-hours">
+        <p>    
+              <a href="https://kk.gov.hu/szekesfehervar" target="_blank"><img src=tankerulet.jpg></a>
+        </p>    
     </div>
 </div>

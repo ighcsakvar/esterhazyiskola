@@ -9,4 +9,5 @@ external_links:
     <a href="tel:+3622582310"><i class="fa fa-phone"></i></a>
     <a href="mailto:igazgato@esterhazyiskola.hu"><i class="fa fa-at"></i></a>
     <a href="https://www.facebook.com/Esterh%C3%A1zy-M%C3%B3ric-%C3%81ltal%C3%A1nos-Iskola-Cs%C3%A1kv%C3%A1r-146915029013117"><i class="fa fa-facebook"></i></a>
+    <a href="mailto:ighcsakvar@gmail.com">Oldallal kapcsolatos észrevételek</a>
 </div>

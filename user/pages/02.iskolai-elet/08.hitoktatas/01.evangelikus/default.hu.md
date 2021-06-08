@@ -23,7 +23,7 @@ A helyi evangélikus egyházközség lelkésze vagy hitoktatója.
 Bárki választhatja az evangélikus hit- és erkölcstant. A jelentkezésnek nem feltétele sem a keresztség, sem az evangélikus egyházhoz való tartozás.
 
 ##### Mi a jelentkezés módja?
-A szülő nyilatkozik arról, hogy gyermekét szeretné beíratni az evangélikus hit- és erkölcstanórára. Az új iskolába kerülő gyerekek szülei a beiratkozás alkalmával, egyéb esetekben a szülők minden tanév május 20. napjáig jelezhetik döntésüket az általános iskolában.
+A szülő nyilatkozik arról, hogy gyermekét szeretné beíratni az evangélikus hit- és erkölcstanórára. Az új iskolába kerülő gyerekek szülei a beiratkozás alkalmával, egyéb esetekben a szülők minden tanév május 20. napjáig jelezhetik döntésüket az általános iskolában. Az esetleges változtatáshoz szükséges dokumentum <a href="http://esterhazyiskola.hu/dokumentumok/letoeltheto-dokumentumok/letoltheto-iskolai/etika-hittan-valasztas/Nyilatkozat%20etika_hittan%20valasztas.pdf">IDE</a> kattintva tölthető le illetve nyomtatható ki.
 
 ![](IMG_20180706.jpg?cropResize=400,400&classes=left)
 

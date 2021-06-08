@@ -1,0 +1,92 @@
+name: Simple Events
+version: 1.3.2
+description: Add a simple list of events to your site.
+icon: calendar
+author:
+  name: Netzhexe.de
+  email: ak@netzhexe.de
+homepage: https://github.com/skinofthesoul/grav-plugin-simple-events
+keywords: grav, plugin, events
+bugs: https://github.com/skinofthesoul/grav-plugin-simple-events/issues
+docs: https://github.com/skinofthesoul/grav-plugin-simple-events/blob/master/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    routes:
+      type: pages
+      multiple: true
+      label: PLUGIN_SIMPLE_EVENTS.ROUTES
+      required: true
+      validate:
+        type: array
+    delete_old:
+      label: PLUGIN_SIMPLE_EVENTS.DELETE_OLD
+      type: toggle
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    unpublish_day:
+      label: PLUGIN_SIMPLE_EVENTS.UNPUBLISH_DAY
+      type: radio
+      default: start
+      options:
+        start: PLUGIN_SIMPLE_EVENTS.LABEL_START
+        end: PLUGIN_SIMPLE_EVENTS.LABEL_END
+    unpublish_time:
+      label: PLUGIN_SIMPLE_EVENTS.UNPUBLISH_TIME
+      type: text
+      default: 00:00
+    use_location:
+      label: PLUGIN_SIMPLE_EVENTS.USE_LOCATION
+      type: toggle
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    use_links:
+      label: PLUGIN_SIMPLE_EVENTS.USE_LINKS
+      type: toggle
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    link_options:
+      type: array
+      label: PLUGIN_SIMPLE_EVENTS.LINK_OPTIONS
+      default:
+        '': 'PLUGIN_SIMPLE_EVENTS.NONE'
+    use_regions:
+      label: PLUGIN_SIMPLE_EVENTS.USE_REGIONS
+      type: toggle
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    regions:
+      type: array
+      label: PLUGIN_SIMPLE_EVENTS.LABEL_REGIONS

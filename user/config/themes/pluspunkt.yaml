@@ -1,0 +1,16 @@
+enabled: true
+dropdowns:
+  enabled: true
+organization:
+  name: null
+  email: null
+  phone: null
+  address:
+    street: null
+    zip_code: null
+    city: null
+    region: null
+    country_code: null
+  geo:
+    latitude: null
+    longitude: null

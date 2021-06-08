@@ -1,0 +1,8 @@
+enabled: true
+social:
+  enabled: true
+fburl: 'https://facebook.com/'
+gplusurl: 'https://google.com/'
+linkedinurl: 'https://linkedin.com/'
+twitterurl: 'https://twitter.com/'
+discordurl: 'https://discord.gg/'

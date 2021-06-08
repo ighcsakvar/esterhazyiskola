@@ -1,0 +1,55 @@
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '': [user/themes/quark-open-publishing, user/themes/quark]
+chromeless:
+  enabled: false
+h5pembedrootpath: 'https://h5p.org/h5p/embed/'
+cc_license:
+  enabled: false
+  type: ccby
+  icon: false
+  text: null
+dropdown:
+  enabled: true
+production-mode: true
+grid-size: null
+header-fixed: true
+header-animated: true
+header-dark: false
+header-transparent: true
+sticky-footer: true
+blog-page: /blog
+blog_page_hero_classes: null
+spectre:
+  exp: false
+  icons: false
+displaycustommenus:
+  enabled: false
+display_of_git_sync_repo_link: none
+type_of_git_sync_repo_link: view
+custom_git_sync_repo_link_icon: null
+custom_git_sync_repo_link_text: null
+git_sync_edit_note_text: null
+custom_git_sync_repo_presentation_link_text: null
+git_sync_repo_link: null
+custom_logo:
+  user/themes/quark-open-publishing/images/logo/header-logo.png:
+    name: header-logo.png
+    type: image/png
+    size: 86588
+    path: user/themes/quark-open-publishing/images/logo/header-logo.png
+custom_logo_mobile:
+  user/themes/quark-open-publishing/images/logo/header-logo.png:
+    name: header-logo.png
+    type: image/png
+    size: 86588
+    path: user/themes/quark-open-publishing/images/logo/header-logo.png
+menu:
+  -
+    text: 'Teszt menu'
+    icon: null
+    url: 'http://blabla.com'
+    target: _blank
