@@ -1,0 +1,7 @@
+enabled: true
+allow_in_page: true
+allow_in_grav: true
+allow_in_filesystem: true
+allowed_extensions:
+  - txt
+  - csv
